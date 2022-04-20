@@ -40,7 +40,15 @@ client.on('message', message =>{
         client.commands.get('unmute').execute(message, args);
     } else if (command === 'clear'){
         client.commands.get('clear').execute(message, args);
-}
+    } else if (command === '8ball'){
+        client.commands.get('8ball').execute(message, args);
+    } else if (command === 'howgay'){
+        client.commands.get('poll').execute(message, args);
+    } else if (command === 'poll'){
+        client.commands.get('poll').execute(message, args);
+    } else if (command === 'serverinfo'){
+        client.commands.get('serverinfo').execute(message, args);
+    }
  });
 
 

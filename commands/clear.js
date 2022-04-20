@@ -9,7 +9,7 @@ module.exports = {
             if(args[0] > 100) return message.reply("You cannot clear that many messages at one time!");
             if(args[0] < 1) return message.reply("You need to delete atleast one message!");
 
-            await message.channel.messages.fetch({Limit: ++args[0]}).then(messages =>{
+            await message.channel.messages.fetch({Limit: args[0]}).then(messages =>{
                 message.channel.bulkDelete(messages);
             });
         } else {
